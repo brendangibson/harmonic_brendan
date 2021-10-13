@@ -52,6 +52,6 @@ The architecture of the data fetching is that all of the company data is fetched
 ## TODO
 * Pagination of results
 * Saving the query
-* Manipulation functions for the query over the data
+* Manipulation functions for the query over the highlights field
 * Sortable columns
 * Auto-suggestion for the third (operand) field
