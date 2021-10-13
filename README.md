@@ -55,3 +55,6 @@ The architecture of the data fetching is that all of the company data is fetched
 * Manipulation functions for the query over the highlights field
 * Sortable columns
 * Auto-suggestion for the third (operand) field
+
+
+For the attention of @sangm, @maxruderman1, @austinberke
