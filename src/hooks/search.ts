@@ -16,15 +16,28 @@ export const useSaveQuery = () => {
   };
 };
 
-// Hook to run a search
-// TODO: implement all the logic on the results, in memory
+// "AND" of two lists
+export const combine = (a: Results, b: Results): Results => {
+  const bIds = new Set();
+  b.forEach((result) => bIds.add(result.id));
+  return [...a.filter((result) => !bIds.has(result.id)), ...b];
+};
 
+// "OR" of two lists
+export const intersect = (a: Results, b: Results): Results => {
+  const bIds = new Set();
+  b.forEach((result) => bIds.add(result.id));
+  return [...a.filter((result) => bIds.has(result.id))];
+};
+
+// Hook to run a search
 export const useSearch = () => {
   return (query: Query, results?: Results): Results | undefined => {
     return runQueryOverResults(query, results);
   };
 };
 
+// Runs a single clause over the results to return a filtered lists of results that match
 const runClauseOverResults = (
   clause: QueryClause,
   results?: Results
@@ -60,18 +73,7 @@ const runClauseOverResults = (
   }
 };
 
-export const combine = (a: Results, b: Results): Results => {
-  const bIds = new Set();
-  b.forEach((result) => bIds.add(result.id));
-  return [...a.filter((result) => !bIds.has(result.id)), ...b];
-};
-
-export const intersect = (a: Results, b: Results): Results => {
-  const bIds = new Set();
-  b.forEach((result) => bIds.add(result.id));
-  return [...a.filter((result) => bIds.has(result.id))];
-};
-
+// Runs each clause and then combines the results
 const runQueryOverResults = (query: Query, results?: Results): Results | [] => {
   const filteredResults = query.map((clause) =>
     runClauseOverResults(clause, results)
