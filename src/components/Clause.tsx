@@ -24,10 +24,10 @@ const Clause = ({ clause, onDelete, onChange }: Props) => {
   const field = fieldSetup[clause.field];
 
   const handleFieldChange = (newFieldName: string) => {
-    const newField = fieldSetup.find((item) => item.label === newFieldName);
+    const newField = fieldSetup.find((item) => t(item.label) === newFieldName);
 
     if (newField) {
-      onChange(Object.assign(clause, { field: newField }));
+      onChange(Object.assign(clause, { field: newField.field }));
     }
   };
 
@@ -78,7 +78,7 @@ const Clause = ({ clause, onDelete, onChange }: Props) => {
         <Box>
           <TextInput
             placeholder="..."
-            value={clause.operand}
+            value={clause.operand ?? ""}
             onChange={(event) => handleOperandChange(event.target.value)}
           />
         </Box>

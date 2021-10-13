@@ -6,6 +6,8 @@ export type Results = Company[];
 
 export enum Field {
   COMPANY,
+  DESCRIPTION,
+  HIGHLIGHTS,
 }
 
 export enum Operation {

@@ -24,10 +24,9 @@ const Clauses = ({
   onChange,
 }: Props) => {
   const handleClauseChange = (newClause: QueryClause) => {
-    onChange([
-      ...query.filter((clause) => clause.id !== newClause.id),
-      newClause,
-    ]);
+    onChange(
+      query.map((clause) => (clause.id !== newClause.id ? clause : newClause))
+    );
   };
 
   return (

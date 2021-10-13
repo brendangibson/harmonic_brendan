@@ -4,7 +4,7 @@ import { useGetData } from "../hooks/getData";
 import { Text, Notification, Spinner } from "grommet";
 import { Query } from "../types/search";
 import { useEffect, useState } from "react";
-import { useSaveQuery, useSearch } from "../hooks/i18n/search";
+import { useSaveQuery, useSearch } from "../hooks/search";
 import { t } from "../hooks/i18n/i18n";
 
 /**
