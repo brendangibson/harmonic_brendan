@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Harmonic take-home test for Brendan
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository has the code for the take-home test for Harmonic, where the task was to to develop a query builder
 
-## Available Scripts
+## To run
 
-In the project directory, you can run:
+### Hosted
 
-### `npm start`
+* Go to [this link](http://doordropping.com/harmonic_brendan/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![image](https://user-images.githubusercontent.com/1231492/137209498-d5518c3a-91a3-43fa-a9b5-3c511e485cf3.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Locally
 
-### `npm test`
+* Clone this repository
+* `cd harmonic_brendan`
+* `npm install`
+* `npm start`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+Click on `Show me all the companies...` to open a search box
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Code
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Modules
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This application uses React, with the setup by Create React App.
 
-### `npm run eject`
+It uses typescript, eslint, and prettier for static analysis.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+It uses [grommet](https://grommet.io) and styled-components for the visuals.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Architecture
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Components
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The top level component is `App` which contains `TakeHome` and this contains `SearchContainer`.
 
-## Learn More
+Within `SearchContainer` the rendering exists for the search box to create a query and the search result.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Hooks
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+There are hooks for a simple implementation of I18n, search, and getting the data from the server.
 
-### Code Splitting
+## Design Decisions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+I decided to use [grommet](https://grommet.io) for the UI design system. I did not want to have to re-implement a Dropdown and some of the text and layout features from grommet were nice too. I also used `styled-components` to augment the styling. I have used this a lot in the past, and it is my favorite method of styling in React.
 
-### Analyzing the Bundle Size
+The architecture of the data fetching is that all of the company data is fetched when the page is loaded, then the query is used to manipulate that data in memory. This approach was chosen because company data probably doesn't change very often, and there is not a huge payload so the startup cost is not too high, and the compromise is that manipulating the data on the client is much faster than requesting it from the server for every query change.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## TODO
+* Pagination of results
+* Saving the query
+* Manipulation functions for the query over the data
+* Sortable columns
+* Auto-suggestion for the third (operand) field
