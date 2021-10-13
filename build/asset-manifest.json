@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/harmonic_brendan/static/css/main.a617e044.chunk.css",
-    "main.js": "/harmonic_brendan/static/js/main.dcb5ada1.chunk.js",
-    "main.js.map": "/harmonic_brendan/static/js/main.dcb5ada1.chunk.js.map",
-    "runtime-main.js": "/harmonic_brendan/static/js/runtime-main.0b0989fc.js",
-    "runtime-main.js.map": "/harmonic_brendan/static/js/runtime-main.0b0989fc.js.map",
-    "static/js/2.708eff57.chunk.js": "/harmonic_brendan/static/js/2.708eff57.chunk.js",
-    "static/js/2.708eff57.chunk.js.map": "/harmonic_brendan/static/js/2.708eff57.chunk.js.map",
-    "static/js/3.f8b0e7e0.chunk.js": "/harmonic_brendan/static/js/3.f8b0e7e0.chunk.js",
-    "static/js/3.f8b0e7e0.chunk.js.map": "/harmonic_brendan/static/js/3.f8b0e7e0.chunk.js.map",
+    "main.css": "/harmonic_brendan/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/harmonic_brendan/static/js/main.394e5436.chunk.js",
+    "main.js.map": "/harmonic_brendan/static/js/main.394e5436.chunk.js.map",
+    "runtime-main.js": "/harmonic_brendan/static/js/runtime-main.f69d6a12.js",
+    "runtime-main.js.map": "/harmonic_brendan/static/js/runtime-main.f69d6a12.js.map",
+    "static/js/2.898d7926.chunk.js": "/harmonic_brendan/static/js/2.898d7926.chunk.js",
+    "static/js/2.898d7926.chunk.js.map": "/harmonic_brendan/static/js/2.898d7926.chunk.js.map",
+    "static/js/3.14726d45.chunk.js": "/harmonic_brendan/static/js/3.14726d45.chunk.js",
+    "static/js/3.14726d45.chunk.js.map": "/harmonic_brendan/static/js/3.14726d45.chunk.js.map",
     "index.html": "/harmonic_brendan/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/harmonic_brendan/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.708eff57.chunk.js.LICENSE.txt": "/harmonic_brendan/static/js/2.708eff57.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/harmonic_brendan/static/media/logo.6ce24c58.svg"
+    "static/css/main.6dea0f05.chunk.css.map": "/harmonic_brendan/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.898d7926.chunk.js.LICENSE.txt": "/harmonic_brendan/static/js/2.898d7926.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.0b0989fc.js",
-    "static/js/2.708eff57.chunk.js",
-    "static/css/main.a617e044.chunk.css",
-    "static/js/main.dcb5ada1.chunk.js"
+    "static/js/runtime-main.f69d6a12.js",
+    "static/js/2.898d7926.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.394e5436.chunk.js"
   ]
 }

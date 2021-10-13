@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Harmonic",
+    "description": "What this is all about",
+    "highlights": [
+      {
+        "category": "MAKES_LOTTA_MONEY"
+      },
+      {
+        "category": "IS_HARMNOIC",
+        "text": "Is Harmonic"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "pets.com",
+    "description": "Poster child",
+    "highlights": []
+  }
+]
