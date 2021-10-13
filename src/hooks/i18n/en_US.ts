@@ -1,0 +1,26 @@
+const translations = {
+  addNew: "+ Add New Filter",
+  and: "AND",
+  companyName: "Company Name",
+  contains: "Contains",
+  delete: "Delete",
+  descriptionHeader: "Description",
+  doesNotContain: "Does not contain",
+  error: "An error has occurred",
+  highlightsHeader: "Highlights",
+  isEmpty: "Is Empty",
+  isExactly: "Is exactly",
+  isNotEmpty: "Is not empty",
+  nameHeader: "Name",
+  noResults: "No Results",
+  or: "OR",
+  saveAsNewSearch: "Save as new search",
+  saveNotificationTitle: "Notification",
+  saveNotificationMsg: "Your query has been saved",
+  search: "Search",
+  searchTitle: "Show me all the companies...",
+  searchTitleTip: "Click to expand",
+  where: "where",
+};
+
+export default translations;
